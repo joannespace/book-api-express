@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 
 //Error-handling middleware
 app.use((err, req, res, next) => {
-  res.status(err.statusCode.send(err.message));
+  res.status(err.statusCode).send(err.message);
 });
 
 module.exports = app;
